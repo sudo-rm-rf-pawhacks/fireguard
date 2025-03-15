@@ -3,10 +3,15 @@ import datetime
 #Geocoders isn't necessary so long as we input GPS coordinates. If we input county, we do need geocoders to convert county to coords
 #from geopy.geocoders import Nominatim
 from flask import Flask, jsonify, request 
-
+print('so it goes')
 app = Flask(__name__) 
-#geolocator = Nominatim(user_agent = "fireguard")
+#geo-locator = Nominatim(user_agent = "fireguard")
 key = "yU9qHcarLte1Fu65nMmrjwOp5BK38tS9"
+
+@app.route("/test", methods = ['GET', 'POST'])
+def homepage():
+    print('agsdfsdf')
+    return("<p>smoke and mirrors everywhere man</p>")
 
 @app.route('/api/<latitude>/<longitude>', methods = ['GET']) 
 def get_weather_data(latitude, longitude):
@@ -43,8 +48,8 @@ def get_weather_data(latitude, longitude):
             "sun_hours": sun_time
         }
         days.append(dict_to_add)
-    
+
     return days
 
 if __name__ == '__main__': 
-    app.run(debug = True) 
+    app.run(host='0.0.0.0') 
