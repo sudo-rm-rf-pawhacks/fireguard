@@ -1,5 +1,7 @@
 export default function Home() {
   return (
-    <div>Hello</div>
+    <div className="flex-1/2">
+
+    </div>
   );
 }
