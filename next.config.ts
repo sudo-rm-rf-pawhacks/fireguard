@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export", // Ensures static export if you don’t use server functions
+  trailingSlash: true, // Helps with some static route issues
 };
 
 export default nextConfig;

@@ -1,5 +1,7 @@
 import { WildfirePrediction } from "@/components/wildfire-prediction"
 
+export const dynamic = 'force-static'
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-100 p-4 md:p-8">
