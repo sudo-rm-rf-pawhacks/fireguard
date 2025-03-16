@@ -145,6 +145,26 @@ export function WildfirePrediction() {
 
   return (
     <div className="space-y-8">
+      <div className="rounded-lg bg-orange-100 p-4 text-orange-800">
+                    <div className="flex items-start gap-2">
+                      <Info className="mt-0.5 h-5 w-5 flex-shrink-0" />
+                      <div>
+                        <p className="font-medium">IMPORTANT:</p>
+                        <p className="text-sm">
+                          Hello FireGuard Users! Thanks for taking interest in our product! At this time, unfortunately, we have exceeded our budgeted API requests.
+                        </p>
+                        <p className="text-sm mt-4">
+                        What that means in simple terms is we dont have the resources to process requests right now. We are currently working on a solution for this problem.
+                        </p>
+                        <p className="text-sm mt-4">
+                        Thank you for your patience!
+                        </p>
+                        <p className="text-sm">
+                        - The FireGuard Team
+                        </p>
+                      </div>
+                    </div>
+                  </div>
       <Card>
         <CardHeader>
           <CardTitle>Check Your Areas</CardTitle>
