@@ -1,7 +1,4 @@
 import type { Metadata } from "next";
-import { Theme } from "@radix-ui/themes";
-
-import TopBar from "../components/TopBar";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,13 +12,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <Theme>
-        <body>
-          <div><TopBar /></div>
-          <div>{children}</div>
-        </body>
-      </Theme>
+    <html lang="en" className="bg-gray-600 min-h-screen w-full flex flex-col">
+      <body>
+        <div>{children}</div>
+      </body>
     </html>
   )
 }
