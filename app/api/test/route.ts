@@ -11,8 +11,6 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const num = searchParams.get("num");
 
-  console.log(process.env.ZIPCODEAPI_APP_KEY);
-
   const openResponse = await fetch(`https://www.zipcodeapi.com/rest/${process.env.ZIPCODEAPI_APP_KEY}/info.json/${num}/degrees`)
   const openData = await openResponse.json();
 
